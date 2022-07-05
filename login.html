@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <title>WELCOME!</title>
+</head>
+
+<body>
+
+    <div class="px-4 py-5 px-md-5 text-center text-lg-start" style=" color: aliceblue;">
+        <div class="container" style="background-color: #520000;">
+            <div class="row gx-lg-5  align-items-center">
+
+                <form method="post" action="$PORTAL_ACTION$" class="modal-content animate mb-5">
+                    <div class="text-center mt-3 border-bottom border-bottom-6 border-dark ">
+                        <h4 class=" fw-bolder text-warning ">
+                            MITCH PISO WiFi
+                            <p class="fw-bolder text-warning ">(GK Area)</p>
+                        </h4>
+                    </div>
+
+                    <div class="text-center mt-4 ">
+                        <img src="img/captiveportal-mitchlogo.png"
+                            class="img-fluid img-thumbnail rounded mx-auto d-block " alt="...">
+                    </div>
+
+                    <div class="d-grid gap-0 col-9 m-auto mt-4 p-8 text-center">
+                        <label for="voucher" class="fw-bolder text-center fs-5">TYPE YOUR VOUCHER CODE HERE</label>
+                        <input class="text-center form-control form-control-lg col-0 mt-1" type="text"
+                            name="auth_voucher" id="auth_voucher" required>
+                    </div>
+
+                    <div class="d-grid gap-2  mt-4 col-4 mx-auto">
+                        <input name="redirurl" type="hidden" value="$PORTAL_REDIRURL$">
+                        <input type="submit" name="accept" id="accept" value="Continue"
+                            class="fw-bolder btn btn-primary btn-lg form-outline mb-4">
+                    </div>
+
+                    <div class="container col-md-8 mt-4 mb-4 text-center img-fluid img-thumbnail rounded mx-auto d-block"
+                        alt="..." style=" background-image: url(img/bg.jpg)">
+                        <div class=" d-grid gap-3 col-11 m-auto mt-4 mb-4 p-3">
+                            <input class="fw-bolder text-center btn btn-danger btn-lg" type="submit" name="" id=""
+                                value="1 Hour = Php 5.00" data-bs-dismiss="modal">
+                            <input class="fw-bolder text-center btn btn-primary btn-lg" type="submit" name="" id=""
+                                value="3 Hours = Php 12.00" data-bs-dismiss="modal">
+                            <input class="fw-bolder text-center btn btn-warning btn-lg" type="submit" name="" id=""
+                                value="1 Day = Php 25.00" data-bs-dismiss="modal">
+                            <input class="fw-bolder text-center btn btn-success btn-lg" type="submit" name="" id=""
+                                value="1 Month = Php 300" data-bs-dismiss="modal">
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-2">
+                        <p class="fw-bolder p-copyright text-warning fs-6">©MITCH 2021. All Rights Reserved.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
