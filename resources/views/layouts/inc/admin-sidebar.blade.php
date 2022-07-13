@@ -2,22 +2,18 @@
     <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
         <div class="sb-sidenav-menu">
             <div class="nav">
-                <div class="sb-sidenav-menu-heading">Core</div>
-
                 <!-- DASHBOARD -->
                 <a class="nav-link {{ Request::is('admin/dashboard') ? 'active' : '' }}"
                     href="{{ url('admin/dashboard') }}">
-                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                    <div class="sb-nav-link-icon"><i class="fa-solid fa-gauge-high"></i></div>
                     Dashboard
                 </a>
-
-                <div class="sb-sidenav-menu-heading">Interface</div>
 
                 <!-- CATEGORY -->
                 <a class="nav-link {{ Request::is('admin/category') || Request::is('admin/add-category') || Request::is('admin/edit-categroy/*') ? 'collapse active' : 'collapsed' }} collapsed"
                     href="#" data-bs-toggle="collapse" data-bs-target="#collapseCategory" aria-expanded="false"
                     aria-controls="collapseCategory">
-                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                    <div class="sb-nav-link-icon"><i class="fa-solid fa-list"></i></div>
                     Category
                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
@@ -35,7 +31,7 @@
                 <a class="nav-link {{ Request::is('admin/post') || Request::is('admin/add-post') || Request::is('admin/edit-post/*') ? 'collapse active' : 'collapsed' }} collapsed"
                     href="#" data-bs-toggle="collapse" data-bs-target="#collapsePost" aria-expanded="false"
                     aria-controls="collapsePost">
-                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                    <div class="sb-nav-link-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
                     Post
                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
@@ -52,27 +48,20 @@
                 <!-- USER -->
                 <a class="nav-link {{ Request::is('admin/user') ? 'active' : '' }}"
                     href="{{ url('admin/user') }}">
-                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                    <div class="sb-nav-link-icon"><i class="fa-solid fa-users"></i></div>
                     Users
                 </a>
 
-                <!-- CHANGE PASSWORD -->
-                <a class="nav-link" href="{{ url('change-password') }}">
-                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                    Change Password
-                </a>
-
-                <!-- ADDONS -->
-                <div class="sb-sidenav-menu-heading">Addons</div>
-                <a class="nav-link" href="{{ url('admin/setting') }}">
-                    <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                <a class="nav-link {{ Request::is('admin/setting') ? 'active' : '' }}"
+                    href="{{ url('admin/setting') }}">
+                    <div class="sb-nav-link-icon"><i class="fa-solid fa-gears"></i></div>
                     Settings
                 </a>
             </div>
         </div>
         <div class="sb-sidenav-footer text-center">
             {{-- <div class="small">Logged in as:</div> --}}
-            Administration
+            ADMIN
         </div>
     </nav>
 </div>

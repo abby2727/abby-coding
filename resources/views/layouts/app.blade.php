@@ -20,11 +20,9 @@
     @endphp
 
     @if ($setting)
-        <link rel="shortcut icon" href="{{ asset('uploads/website-favicon/'.$setting->favicon) }}" type="image/x-icon">
+        <link rel="shortcut icon" href="{{ asset('uploads/website-favicon/' . $setting->favicon) }}"
+            type="image/x-icon">
     @endif
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -43,7 +41,7 @@
 
     <div id="app">
         @include('layouts.inc.frontend-navbar')
-        
+
         <main>
             @yield('content')
         </main>

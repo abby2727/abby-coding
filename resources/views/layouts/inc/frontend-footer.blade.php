@@ -7,7 +7,9 @@
 
                 </div>
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum vero officiis quod magni adipisci voluptates saepe quia incidunt explicabo alias vel temporibus reiciendis culpa voluptatum eius eveniet ex, qui laborum!
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum vero officiis quod magni adipisci
+                    voluptates saepe quia incidunt explicabo alias vel temporibus reiciendis culpa voluptatum eius
+                    eveniet ex, qui laborum!
                 </p>
             </div>
 

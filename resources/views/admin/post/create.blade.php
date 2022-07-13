@@ -1,4 +1,4 @@
-@extends('layouts/master')
+@extends('layouts.master')
 
 @section('title', 'Add Post')
 
@@ -10,7 +10,7 @@
             <div class="card-header">
                 <h4>
                     Add Post
-                    <a href="{{ url('admin/post') }}" class="btn btn-sm btn-info float-end">View Post</a>
+                    <a href="{{ url('admin/post') }}" class="btn btn-info float-end">View Post</a>
                 </h4>
             </div>
             <!-- card body -->
@@ -84,7 +84,7 @@
                         </div>
                         <div class="col-md-8">
                             <div class="mb-3">
-                                <input type="submit" class="btn btn-primary float-end" value="Save Post">
+                                <input type="submit" class="btn btn-primary float-end float-end" value="Save">
                             </div>
                         </div>
                     </div>

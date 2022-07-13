@@ -8,12 +8,11 @@
 
     <title>@yield('title')</title>
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <!-- Styles (Bootstrap) and Fonts -->
+    <link href="{{ asset('assets/css/styles.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-    <!-- Styles -->
-    <link href="{{ asset('assets/css/styles.css') }}" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d8170c95f7.js" crossorigin="anonymous"></script>
 
     <!-- Summernote CSS link -->
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
@@ -48,11 +47,9 @@
             border-radius: 0.25rem;
         }
     </style>
-
 </head>
 
 <body>
-
     @include('layouts/inc/admin-navbar')
 
     <div id="layoutSidenav">
@@ -69,11 +66,16 @@
     <!-- Scripts -->
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/scripts.js') }}"></script>
-    <script src="{{ asset('assets/js/all.min.js') }}"></script>
+
+    {{-- Font Awesome v6.1.1 --}}
+    {{-- <script src="{{ asset('assets/js/all.min.js') }}"></script> --}}
+
+    <!-- jQuery -->
     <script src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script>
 
     <!-- Summernote -->
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+
     <script>
         $(document).ready(function() {
             $("#mySummernote").summernote({
@@ -93,7 +95,6 @@
     </script>
 
     @yield('scripts')
-
 </body>
 
 </html>

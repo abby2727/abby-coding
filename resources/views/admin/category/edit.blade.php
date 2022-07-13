@@ -1,4 +1,4 @@
-@extends('layouts/master')
+@extends('layouts.master')
 
 @section('title', 'Edit Category')
 
@@ -9,7 +9,7 @@
         <div class="card-header">
             <h4>
                 Edit Category
-                <a href="{{ url('admin/category') }}" class="btn btn-sm btn-danger float-end">Back</a>
+                <a href="{{ url('admin/category') }}" class="btn btn-danger float-end">Back</a>
             </h4>
         </div>
         <div class="card-body">
@@ -65,7 +65,7 @@
                     <textarea name="meta_keyword" rows="3" class="form-control">{{ $category->meta_keyword }}</textarea>
                 </div>
 
-                <h6>Status Mode</h6>
+                <h6>Status</h6>
 
                 <div class="row">
                     <div class="col-md-3 mb3">
@@ -79,7 +79,7 @@
                     </div>
 
                     <div class="col-md-6">
-                        <input type="submit" value="Update Category" class="btn btn-primary">
+                        <input type="submit" value="Update" class="btn btn-primary float-end">
                     </div>
                 </div>
 

@@ -10,7 +10,8 @@ class UserController extends Controller
 {
     public function index()
     {
-        $user = User::all();
+        $user = User::where('role_as', '0')->get();
+
         return view('admin.user.index', compact('user'));
     }
 
@@ -22,14 +23,14 @@ class UserController extends Controller
     public function edit($user_id)
     {
         $user = User::find($user_id);
+
         return view('admin.user.edit', compact('user'));
     }
 
     public function update(Request $request, $user_id)
     {
         $user = User::find($user_id);
-        if ($user) 
-        {
+        if ($user) {
             $user->role_as = $request->role_as;
 
             $user->update();

@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-use App\Rules\MatchOldPassword;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
@@ -45,17 +44,17 @@ class ChangePasswordController extends Controller
 
         // Invalid current password
         if (!(Hash::check($request->get('current_password'), Auth::user()->password))) {
-            return redirect()->back()->with("error","Your current password does not match with the old password.");
+            return redirect()->back()->with("error", "Your current password does not match with the old password.");
         }
 
         // New and current password cannot be same
-        if(strcmp($request->get('current_password'), $request->get('new_password')) == 0){
-            return redirect()->back()->with("error","New Password cannot be same as your current password.");
+        if (strcmp($request->get('current_password'), $request->get('new_password')) == 0) {
+            return redirect()->back()->with("error", "New Password cannot be same as your current password.");
         }
 
         //Change Password
-        User::find(auth()->user()->id)->update(['password'=> Hash::make($request->new_password)]);
+        User::find(auth()->user()->id)->update(['password' => Hash::make($request->new_password)]);
 
-        return redirect()->back()->with("success","Password successfully changed!");
+        return redirect()->back()->with("success", "Password successfully changed!");
     }
 }

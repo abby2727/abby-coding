@@ -20,7 +20,7 @@ class PostController extends Controller
 
     public function create()
     {
-        $category = Category::where('status', '0')->get();
+        $category = Category::where('status', '1')->get();
         return view('admin.post.create', compact('category'));
     }
 
@@ -47,7 +47,7 @@ class PostController extends Controller
     public function edit($post_id)
     {
         $post = Post::find($post_id);
-        $category = Category::where('status', '0')->get();  // 0 available
+        $category = Category::where('status', '1')->get();
 
         return view('admin.post.edit', compact('post', 'category'));
     }

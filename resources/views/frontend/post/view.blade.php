@@ -1,4 +1,4 @@
-@extends('layouts/app')
+@extends('layouts.app')
 
 @section('title', $post->meta_title)
 
@@ -68,7 +68,7 @@
                                     <!-- check if user is login -->
                                     <div>
                                         <button type="button" value="{{ $comment->id }}"
-                                            class="deleteComment btn btn-sm btn-danger me-2">Delete</button>
+                                            class="deleteComment btn btn-danger me-2">Delete</button>
                                     </div>
                                 @endif
                             </div>

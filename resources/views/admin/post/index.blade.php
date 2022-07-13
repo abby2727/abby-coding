@@ -1,4 +1,4 @@
-@extends('layouts/master')
+@extends('layouts.master')
 
 @section('title', 'Post')
 
@@ -32,7 +32,7 @@
         <div class="card-header">
             <h4>
                 View Posts
-                <a href="{{ url('admin/add-post') }}" class="btn btn-sm btn-primary float-end">Add Post</a>
+                <a href="{{ url('admin/add-post') }}" class="btn btn-primary float-end">Add Post</a>
             </h4>
         </div>
         <div class="card-body">
@@ -70,16 +70,16 @@
                             <td>{{ $item->meta_description }}</td>
                             <td>{{ $item->status == '1' ? 'Show' : 'Hidden' }}</td>
                             <td>
-                                <a href="{{ url('admin/edit-post/'.$item->id) }}" class="btn btn-sm btn-primary">Edit</a>
+                                <a href="{{ url('admin/edit-post/'.$item->id) }}" class="btn btn-primary">Edit</a>
                             </td>
                             <td>
                                 <!-- <form action="{{ url('admin/delete-post/'.$item->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
-                                    <input type="submit" value="Delete" class="btn btn-sm btn-danger">
+                                    <input type="submit" value="Delete" class="btn btn-danger">
                                 </form> -->
 
-                                <button type="button" class="btn btn-sm btn-danger deleteCategoryBtn" value="{{ $item->id }}">Delete</button>
+                                <button type="button" class="btn btn-danger deleteCategoryBtn" value="{{ $item->id }}">Delete</button>
                             </td>
                         </tr>
                         @endforeach

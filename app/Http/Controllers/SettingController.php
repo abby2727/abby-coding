@@ -27,27 +27,23 @@ class SettingController extends Controller
             'meta_description' => 'nullable',
         ]);
 
-        if ($validator->fails())
-        {
+        if ($validator->fails()) {
             return redirect()->back()->withErrors($validator);
         }
 
         $setting = Setting::where('id', '1')->first();
 
         // Update
-        if ($setting)
-        {
+        if ($setting) {
             $setting->website_name = $request->website_name;
 
             // Website Logo
-            if ($request->hasFile('website_logo')) 
-            {
-                $destination = 'uploads/website-logo/'.$setting->logo;
-                if (File::exists($destination))
-                {
+            if ($request->hasFile('website_logo')) {
+                $destination = 'uploads/website-logo/' . $setting->logo;
+                if (File::exists($destination)) {
                     File::delete($destination);
                 }
-                
+
                 $file = $request->file('website_logo');
                 $extension = $file->getClientOriginalExtension();
                 $filename = time() . '.' . $extension;
@@ -57,11 +53,9 @@ class SettingController extends Controller
             }
 
             // Website Favicon
-            if ($request->hasFile('website_favicon')) 
-            {
-                $destination = 'uploads/website-favicon/'.$setting->favicon;
-                if (File::exists($destination))
-                {
+            if ($request->hasFile('website_favicon')) {
+                $destination = 'uploads/website-favicon/' . $setting->favicon;
+                if (File::exists($destination)) {
                     File::delete($destination);
                 }
 
@@ -72,7 +66,7 @@ class SettingController extends Controller
 
                 $setting->favicon = $filename;
             }
-            
+
             $setting->description = $request->description;
             $setting->meta_title = $request->meta_title;
             $setting->meta_keyword = $request->meta_keyword;
@@ -83,14 +77,12 @@ class SettingController extends Controller
         }
 
         // Store
-        else
-        {
+        else {
             $setting = new Setting();
             $setting->website_name = $request->website_name;
-            
+
             // Website Logo
-            if ($request->hasFile('website_logo')) 
-            {
+            if ($request->hasFile('website_logo')) {
                 $file = $request->file('website_logo');
                 $extension = $file->getClientOriginalExtension();
                 $filename = time() . '.' . $extension;
@@ -100,8 +92,7 @@ class SettingController extends Controller
             }
 
             // Website Favicon
-            if ($request->hasFile('website_favicon')) 
-            {
+            if ($request->hasFile('website_favicon')) {
                 $file = $request->file('website_favicon');
                 $extension = $file->getClientOriginalExtension();
                 $filename = time() . '.' . $extension;
@@ -109,7 +100,7 @@ class SettingController extends Controller
 
                 $setting->favicon = $filename;
             }
-            
+
             $setting->description = $request->description;
             $setting->meta_title = $request->meta_title;
             $setting->meta_keyword = $request->meta_keyword;
