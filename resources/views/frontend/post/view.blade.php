@@ -16,8 +16,8 @@
                         <h4>{{ $post->name }}</h4>
                     </div>
                     <!-- <div class="mt-4">
-                                <h6>{{ $post->category->name . '/' . $post->name }}</h6>
-                            </div> -->
+                                                    <h6>{{ $post->category->name . '/' . $post->name }}</h6>
+                                                </div> -->
 
                     <!-- Display post discription -->
                     <div class="card card-shadow mt-4">
@@ -82,13 +82,13 @@
                 </div>
                 <div class="col-md-3">
                     <div class="border p-2 my-2">
-                        <h4>Advertising Area</h4>
+                        <h5>Advertisement Area</h5>
                     </div>
                     <div class="border p-2 my-2">
-                        <h4>Advertising Area</h4>
+                        <h5>Advertisement Area</h5>
                     </div>
                     <div class="border p-2 my-2">
-                        <h4>Advertising Area</h4>
+                        <h5>Advertisement Area</h5>
                     </div>
 
                     <div class="card mt-3">
@@ -97,10 +97,12 @@
                         </div>
                         <div class="card-body">
                             @foreach ($latest_post as $latest_post_item)
-                                <a href="{{ url('tutorial/' . $latest_post_item->category->slug . '/' . $latest_post_item->slug) }}"
-                                    class="text-decoration-none">
-                                    <h6> > {{ $latest_post_item->name }}</h6>
-                                </a>
+                                <div class="mb-3">
+                                    <a href="{{ url('tutorial/' . $latest_post_item->category->slug . '/' . $latest_post_item->slug) }}"
+                                        class="text-decoration-none mb-2">
+                                        <h6>{{ $latest_post_item->name }}</h6>
+                                    </a>
+                                </div>
                             @endforeach
                         </div>
                     </div>

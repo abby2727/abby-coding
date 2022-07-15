@@ -23,7 +23,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" rel="stylesheet">
 
-    <!-- custom datatable css -->
+    <!-- Datatable custom css -->
     <style>
         .dataTables_wrapper .dataTables_paginate .paginate_button {
             padding: 0px !important;
@@ -56,7 +56,6 @@
         @include('layouts/inc/admin-sidebar')
         <div id="layoutSidenav_content">
             <main>
-                <!-- the main content for our application -->
                 @yield('content')
             </main>
             @include('layouts/inc/admin-footer')

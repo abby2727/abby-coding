@@ -22,7 +22,7 @@
 </div>
 
 <div class="sticky-top">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-green mt-2">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-blue mt-2">
         <div class="container">
 
             {{-- Logo in extra small devices --}}

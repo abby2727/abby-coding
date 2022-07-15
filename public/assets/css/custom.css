@@ -24,7 +24,7 @@
 
 .category-heading {
     padding: 10px 12px;
-    border-left: 6px solid #000;
+    border-left: 6px solid #ed8a09;
     background-color: #ddd;
 }
 
@@ -45,10 +45,17 @@
     width: 38px !important;
 }
 
-.underline {
+/* .underline {
     height: 3px;
     width: 60px;
     background-color: #e71212 !important;
+    margin-bottom: 10px;
+} */
+
+.underline {
+    height: 3px;
+    width: 70px;
+    background-color: #ed8a09 !important;
     margin-bottom: 10px;
 }
 
