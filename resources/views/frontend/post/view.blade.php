@@ -74,7 +74,7 @@
                             </div>
                         @empty
                             <div class="card card-body shadow-sm mt-3">
-                                <h6 class="text-danger">No comment</h6>
+                                <h6 class="text-danger">No comment yet.</h6>
                             </div>
                         @endforelse
 

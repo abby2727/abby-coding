@@ -28,7 +28,7 @@
                 @endif
 
                 <div class="card mt-4">
-                    <div class="card-header"> Change Password </div>
+                    <h4 class="card-header">Change Password</h4>
 
                     <div class="card-body">
                         <form method="POST" action="{{ route('change.password') }}">

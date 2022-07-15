@@ -7,7 +7,6 @@
 @section('meta_description', $setting->meta_description)
 
 @section('content')
-
     <div class="bg-danger py-5">
         <div class="container">
             <div class="row">
@@ -34,13 +33,13 @@
         </div>
     </div>
 
-    <div class="py-5">
+    {{-- <div class="py-5">
         <div class="container">
             <div class="border text-center p-3">
                 <h3>Advertisement</h3>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <div class="py-5">
         <div class="container">
@@ -111,5 +110,4 @@
             </div>
         </div>
     </div>
-
 @endsection
